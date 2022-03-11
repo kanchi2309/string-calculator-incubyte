@@ -8,7 +8,8 @@ public class StringCalculator {
 			return 0;
 		}else {
 			int sum=0;
-			String[] nos = numbers.split(",");
+			String[] nos = numbers.replace("\n", ",").split(",");
+			//.split(/[\n,]+/)
 			for(String s:nos) {
 				sum=sum+Integer.parseInt(s);
 			}
